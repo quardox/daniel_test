@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "daniel_test"
   gem.homepage = "http://github.com/quardox/daniel_test"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Making my first gem."
+  gem.description = "Trying out jeweler to make a gem for the first time."
   gem.email = "daniel.loren.nelson@gmail.com"
   gem.authors = ["Daniel Nelson"]
   # dependencies defined in Gemfile
@@ -30,14 +30,6 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
 end
 
 task :default => :test
